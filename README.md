@@ -4,10 +4,7 @@ The (web) challenges I created for the HHCTF 2022.
 ## Web Intro
 A simple challenge where the flag is divided in 4 parts scattered through some files and in a cookie.
 
-These pages are:
-    - style.css
-    - robots.txt
-    - sitemap.xml
+These pages are: *style.css*, *robots.txt*, *sitemap.xml*
 
 ## Icecream
 A website where we can choose an ice cream flavour and where our request parameter is reflected on the page. As it is built with Flask, we can perform a SSTI (Server-Side Template Injection) and execute some commands to find the flag file.
