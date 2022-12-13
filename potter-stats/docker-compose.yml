@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    links:
+      - db
+    ports:
+      - "5000:5000"
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: e3d74d4f3adeda1a
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/1.sql

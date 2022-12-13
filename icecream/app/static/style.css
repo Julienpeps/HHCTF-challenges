@@ -1,0 +1,54 @@
+body {
+    background-color: #eb72bd;
+}
+
+h1 {
+    color: #f8e255;
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    text-align: center;
+}
+
+#flavours {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.flavour {
+    display: inline-block;
+    background-color: #f8e255;
+    border-radius: 50px;
+}
+
+.flavour a {
+    display: block;
+    text-transform: capitalize;
+    font-family: 'Pacifico', cursive;
+    color: #551a8b;
+    font-size: 2em;
+    text-decoration: none;
+    text-align: center;
+}
+
+#order {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+#order h3 {
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+    color: #551a8b;
+}
+
+#order button {
+    background-color: #f8e255;
+    border: none;
+    border-radius: 50px;
+    color: #551a8b;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+}

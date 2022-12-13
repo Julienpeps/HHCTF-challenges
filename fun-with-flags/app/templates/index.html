@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fun With Flags</title>
+    <!-- import Shelvetico.otf font -->
+    <link href="{{ url_for('static', filename='Shelvetica.otf') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="title">
+        <h1>"Fun With Flags" official website</h1>
+        <h2>Select a country and recieve a thorough explaination about its flag.</h2>
+    </div>
+    <div id="countries">
+        <a href="/?country=belgium.txt">Belgium</a>
+        <a href="/?country=sweden.txt">Sweden</a>
+        <a href="/?country=ukraine.txt">Ukraine</a>
+        <a href="/?country=qatar.txt">Qatar</a>
+        <!-- TODO: Get the special flag from program args -->
+    </div>
+    {% if include %}
+        <p id="desc">{{ include }}</p>
+    {% endif %}
+
+    <img src="{{ url_for('static', filename='cooper.gif') }}">
+</body>
+</html>

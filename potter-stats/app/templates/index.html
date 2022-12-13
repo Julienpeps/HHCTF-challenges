@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Potter Stats - Home</title>
+</head>
+<body>
+    <section class="top-bar">
+        <h1>Potter Stats</h1>
+        <a href="{{ url_for('login') }}">Login ></a>
+    </section>
+
+    <h2 class="selection-text">Choose a movie</h2>
+
+    <section class="selection">
+        {% for i in range(1, 9) %}
+            <a href="{{ url_for('index', search=i) }}">{{ i }}</a>
+        {% endfor %}
+    </section>
+
+    {% if content %}
+    <table>
+        <tr>
+            <th>N°</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Director</th>
+        </tr>
+
+        {% for person in content %}
+        <tr>
+            {% for i in person %}
+            <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    </body>
+</html>

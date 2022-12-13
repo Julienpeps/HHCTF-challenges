@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Sitemap: /sitemap.xml
+
+# The robots file can sometimes refer to hidden pages
+# flag-2: _A_r3a11y
